@@ -2197,7 +2197,12 @@ def _alexa_watch_next_episode(kodi, Show):
 @ask.intent('WatchNextEpisode')
 @preflight_check
 def alexa_watch_next_episode(kodi, Show):
-  return _alexa_watch_next_episode(kodi, Show)
+  # return _alexa_watch_next_episode(kodi, Show)
+  kodi.PlayerMoveDown()
+  time.sleep(.2)
+  kodi.Select()
+  return statement("").simple_card("","")
+
 
 
 # Handle the WatchLatestEpisode intent.
