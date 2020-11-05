@@ -2943,7 +2943,7 @@ def alexa_insert_text(kodi, someText):
   card_title = render_template('sending_text', textToBeSent=someText).encode('utf-8')
   log.info(card_title)
   kodi.SendText(someText)
-  return statement('').simple_card(card_title, '')
+  return statement('')
 
 
 # End of intent methods
